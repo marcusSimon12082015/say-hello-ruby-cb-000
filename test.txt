@@ -1,0 +1,31 @@
+
+say_hello
+Hello Kent Beck!  accepts an argument of a name and prints out Hello with that Name (FAILED - 1)
+Hello Ruby Programmer!  defaults to Ruby Programmer when no name is passed in (FAILED - 2)
+
+Failures:
+
+  1) say_hello accepts an argument of a name and prints out Hello with that Name
+     Failure/Error: expect($stdout).to receive(:puts).with("Hello Kent Beck!")
+
+       (#<IO:<STDOUT>>).puts("Hello Kent Beck!")
+           expected: 1 time with arguments: ("Hello Kent Beck!")
+           received: 0 times
+     # ./spec/say_hello_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) say_hello defaults to Ruby Programmer when no name is passed in
+     Failure/Error: expect($stdout).to receive(:puts).with("Hello Ruby Programmer!")
+
+       (#<IO:<STDOUT>>).puts("Hello Ruby Programmer!")
+           expected: 1 time with arguments: ("Hello Ruby Programmer!")
+           received: 0 times
+     # ./spec/say_hello_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01312 seconds (files took 0.1668 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/say_hello_spec.rb:5 # say_hello accepts an argument of a name and prints out Hello with that Name
+rspec ./spec/say_hello_spec.rb:10 # say_hello defaults to Ruby Programmer when no name is passed in
+
